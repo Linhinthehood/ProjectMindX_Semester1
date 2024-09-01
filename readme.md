@@ -10,17 +10,23 @@ index:
 1. Làm theo dạng báo điện tử (NewYorkTimes, thời báo 24h, ...)
 2. Có các chức năng như search, list of content, image ads, phân loại theo nội dung,...
 3. Sử dụng bootstrap để design css
-3-1. Với các bài báo không có tiêu đề, tạo một id = "loading-img" để đặt vào đó (chưa xong)
+3-1. Với các bài báo không có tiêu đề, tạo một id = "loading-img" để đặt vào đó 
 4. Làm thêm DailyNews để trang web đỡ nhàm
 5. Bổ sung thêm hover để tăng tính tương tác với người dùng
 6. Link với signIn.html và signUp.html bằng tag <a>
-7. Bổ sung carousel tăng tính thân thiện với người dùng (chưa xong)
+7. Bổ sung carousel tăng tính thân thiện với người dùng (chuyển sang signIn.html)
 8. Làm header/footer
 9. Bổ sung thêm hover cho button (28-8)
+10. Chèn background
 
 signUp:
 1. Làm theo dạng các trang đăng ký tài khoản (tham khảo của facebook signUp)
-2. Có chèn logo của báo
+2. Có các chức năng cơ bản của một SignIn page (email, password, ...)
+3. Làm thêm header giống như mấy quảng cáo ads
+4. Làm carousel giới thiệu sơ qua website
+5. có chèn logo của báo (ở footer)
+6. Có các tính năng như forgot password, remember me (chưa hoàn thành)
+
 
 signIn:
 1.

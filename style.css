@@ -1,6 +1,7 @@
-* {
-    padding: 0;
-    box-sizing: border-box;
+body {
+    background: url(image/index_background.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 /* Main news */
@@ -41,10 +42,10 @@
     color: black;
 }
 
-#newsdetails {
+/* #newsdetails {
     border: 1px solid black;
     border-radius: 4px;
-}
+} */
 
 /* Loading Img */
 .loader {
