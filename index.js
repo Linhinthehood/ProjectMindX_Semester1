@@ -288,3 +288,9 @@ function displayDailyNews(newsArr) {
 
 // Call the function to fetch and display Daily News
 fetchDailyNews();
+
+
+// More setting here
+document.getElementById('settings').addEventListener('click', function() {
+    alert('Đang phát triển');
+})

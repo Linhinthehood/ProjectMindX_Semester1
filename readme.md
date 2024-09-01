@@ -19,8 +19,8 @@ index:
 9. Bổ sung thêm hover cho button (28-8)
 10. Chèn background
 
-signUp:
-1. Làm theo dạng các trang đăng ký tài khoản (tham khảo của facebook signUp)
+signIn:
+1. Làm theo dạng các trang đăng nhập tài khoản (tham khảo của Facebook, NewYorkTimes)
 2. Có các chức năng cơ bản của một SignIn page (email, password, ...)
 3. Làm thêm header giống như mấy quảng cáo ads
 4. Làm carousel giới thiệu sơ qua website
@@ -28,5 +28,5 @@ signUp:
 6. Có các tính năng như forgot password, remember me (chưa hoàn thành)
 
 
-signIn:
-1.
+signUp:
+1. Làm giống như signIn page, và có các tính năng cơ bản của SignIn page
