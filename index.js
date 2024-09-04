@@ -185,14 +185,8 @@ function displayNews() {
         image.setAttribute("height", "matchparent");
         image.setAttribute("width", "100%");
 
-        // Use a loader if the API does not provide an image URL
-        if (news.urlToImage) {
-            image.src = news.urlToImage;
-        } else {
-            const loader = document.createElement('div');
-            loader.className = 'loader';
-            card.appendChild(loader);
-        }
+        // Use a fallback image if the API does not provide an image URL
+        image.src = news.urlToImage || "image/UndefinedImage.png"; // Replace "image/fallback.jpg" with the path to your fallback image
 
         image.alt = news.title || "News Image"; // Add an alt attribute
 

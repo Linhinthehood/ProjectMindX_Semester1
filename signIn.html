@@ -14,6 +14,7 @@
       background: url(image/index_background.jpg);
       background-position: center;
       background-size: cover;
+      overflow-x: hidden;
     }
 
     .header {
@@ -56,6 +57,14 @@
       /* Adjust thickness and color */
       margin: 0;
       flex-grow: 1;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0;
     }
   </style>
 </head>
@@ -133,16 +142,16 @@
 
           <!-- Email input -->
           <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="email">Email address</label>
             <input type="email" id="email" class="form-control form-control-lg"
               placeholder="Enter a valid email address" />
-            <label class="form-label" for="email">Email address</label>
             <div id="emailError" class="text-danger"></div>
           </div>
 
           <!-- Password input -->
           <div data-mdb-input-init class="form-outline mb-3">
-            <input type="password" id="password" class="form-control form-control-lg" placeholder="Enter password" />
             <label class="form-label" for="password">Password</label>
+            <input type="password" id="password" class="form-control form-control-lg" placeholder="Enter password" />
             <div id="passwordError" class="text-danger"></div>
           </div>
 
@@ -156,8 +165,8 @@
           </div>
 
           <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="button" class="btn btn-primary btn-lg" id="loginButton" 
-            style="padding-left: 2.5rem; padding-right: 2.5rem;" disabled>Login</button>
+            <button type="button" class="btn btn-primary btn-lg" id="loginButton"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;" disabled>Login</button>
             <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="signUp.html"
                 class="link-danger">Register</a></p>
           </div>
@@ -201,18 +210,18 @@
 
       // Email validation
       if (!emailPattern.test(email)) {
-          emailError.textContent = 'Please enter a valid email address.';
-          isValid = false;
+        emailError.textContent = 'Please enter a valid email address.';
+        isValid = false;
       } else {
-          emailError.textContent = '';
+        emailError.textContent = '';
       }
 
       // Password validation
       if (password.length < 8) {
-          passwordError.textContent = 'Password must be at least 8 characters long.';
-          isValid = false;
+        passwordError.textContent = 'Password must be at least 8 characters long.';
+        isValid = false;
       } else {
-          passwordError.textContent = '';
+        passwordError.textContent = '';
       }
 
       // Enable or disable the login button based on validation
@@ -223,14 +232,14 @@
     document.getElementById('password').addEventListener('input', validateForm);
 
 
-    document.getElementById('loginButton').addEventListener('click', function(event) {
-        window.location.href = 'index.html';
+    document.getElementById('loginButton').addEventListener('click', function (event) {
+      window.location.href = 'index.html';
     });
 
     // forgotPassword
-    document.getElementById('forgotPassword').addEventListener('click', function(){
+    document.getElementById('forgotPassword').addEventListener('click', function () {
       alert('Đang phát triển');
-    } )
+    })
 
 
     // Enable carousel auto-rotation with 3 seconds interval

@@ -2,40 +2,53 @@ body {
     background: url(image/index_background.jpg);
     background-position: center;
     background-size: cover;
+    overflow-x: hidden;
+    padding-bottom: 50px;
 }
 
 /* Main news */
 #newsType h4 {
     margin: 0;
-    font-size: 1.5rem; /* Initial font size */
-    font-weight: normal; /* Initial font weight */
+    /* font-size: 1.5rem; */
+    /* Initial font size */
+    font-weight: bold;
+    color: #0b53a0;
+    /* Initial font weight */
     text-align: left;
-    transform: translateX(0);
-    transition: transform 0.5s ease, color 0.5s ease, font-size 0.5s ease, font-weight 0.5s ease;
+    /* transform: translateX(0); */
+    /* transition: transform 0.5s ease, color 0.5s ease, font-size 0.5s ease, font-weight 0.5s ease; */
 }
 
 #newsType:hover h4 {
-    color: #0b53a0; /* Change to the desired hover color */
-    font-size: 2rem; /* Increase font size on hover */
-    font-weight: bold; /* Make text bold on hover */
-    transform: translateX(50%); /* Move the text to the center */
+    color: #0b53a0;
+    /* Change to the desired hover color */
+    /* font-size: 2rem; */
+    /* Increase font size on hover */
+    /* font-weight: bold; */
+    /* Make text bold on hover */
+    /* transform: translateX(50%); */
+    /* Move the text to the center */
 }
 
 #cardTags {
-    transition: transform 0.5s ease, color 0.5s ease, font-size 0.5s ease, font-weight 0.5s ease;
+    /* transition: transform 0.2s ease, color 0.5s ease, font-size 0.2s ease, font-weight 0.2s ease; */
+    transition: .2s all;
 }
 
 #cardTags:hover {
-    transform: scale(1.05); /* Slightly enlarge the entire content */
-    color: #343a40; /* Change the text color */
-    font-size: 1.1rem; /* Increase the font size */
-    font-weight: bold; /* Make the text bolder */
-    border: 1px solid black;
+    transform: scale(1.01);
+    /* Slightly enlarge the entire content */
+    color: #343a40;
+    /* Change the text color */
+    /* font-size: 1.1rem; */
+    /* Increase the font size */
+    /* font-weight: bold; */
+    /* Make the text bolder */
+    /* border: 1px solid black; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: .2s all;
 }
 
-#cardButton {
-    transition: transform 0.5s ease, color 0.5s ease;
-}
 
 #cardButton:hover {
     background-color: rgba(255, 0, 0, 0.718);
@@ -54,34 +67,46 @@ body {
     aspect-ratio: 1;
     border-radius: 50%;
     background: #25b09b;
-    --_m: 
-      conic-gradient(#0000 10%,#000),
-      linear-gradient(#000 0 0) content-box;
+    --_m:
+        conic-gradient(#0000 10%, #000),
+        linear-gradient(#000 0 0) content-box;
     -webkit-mask: var(--_m);
-            mask: var(--_m);
+    mask: var(--_m);
     -webkit-mask-composite: source-out;
-            mask-composite: subtract;
+    mask-composite: subtract;
     animation: l3 1s infinite linear;
-  }
-  @keyframes l3 {to{transform: rotate(1turn)}}
+}
+
+@keyframes l3 {
+    to {
+        transform: rotate(1turn)
+    }
+}
 
 
 
 /* Daily news */
 #dailyNewsListContainer {
     padding: 10px;
-    background-color: #f8f9fa; /* Light background for contrast */
-    border: 1px solid black; /* 1px solid black border on all sides */
-    border-radius: 4px; /* Rounded corners */
+    background-color: #f8f9fa;
+    /* Light background for contrast */
+    /* border: 1px solid black; */
+    /* 1px solid black border on all sides */
+    border-radius: 4px;
+    /* Rounded corners */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #dailyNewsList {
-    padding-left: 0; /* Remove default list padding */
-    list-style-type: none; /* Remove bullets from the list */
+    padding-left: 0;
+    /* Remove default list padding */
+    list-style-type: none;
+    /* Remove bullets from the list */
 }
 
 #dailyNewsList li {
-    margin-bottom: 0.5rem; /* Space between articles */
+    margin-bottom: 0.5rem;
+    /* Space between articles */
 }
 
 #dailyNewsList hr {
@@ -92,14 +117,17 @@ body {
 
 #dailyNewsList a {
     font-weight: bold;
-    text-decoration: none; /* Remove underline from links */
-    color: #b8a817; /* Bootstrap info color */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #b8a817;
+    /* Bootstrap info color */
     transition: color 2s;
 }
 
 #dailyNewsList a:hover {
     color: #0d6efd;
-    text-decoration: underline; /* Underline on hover for better UX */
+    text-decoration: underline;
+    /* Underline on hover for better UX */
 }
 
 /* Additional styling for the "Daily News" header */
@@ -107,21 +135,48 @@ body {
     font-size: 1.25rem;
     font-weight: bold;
     padding-bottom: 10px;
-    border-bottom: 2px solid #17a2b8; /* Info color for the header underline */
+    border-bottom: 2px solid #17a2b8;
+    /* Info color for the header underline */
 }
 
 #dailyNewsTitle h4 {
     margin: 0;
-    font-size: 1.5rem; /* Initial font size */
-    font-weight: normal; /* Initial font weight */
+    font-size: 1.5rem;
+    /* Initial font size */
+    font-weight: bold;
+    /* Initial font weight */
     text-align: left;
     /* transform: translateX(0); */
     transition: transform 0.5s ease, color 0.5s ease, font-size 0.5s ease, font-weight 0.5s ease;
 }
 
-#dailyNewsTitle:hover h4 {
-    color: #0b53a0; /* Change to the desired hover color */
-    font-size: 2rem; /* Increase font size on hover */
-    font-weight: bold; /* Make text bold on hover */
-    /* transform: translateX(50%); Move the text to the center */
+/* #dailyNewsTitle:hover h4 {
+    color: #0b53a0;
+    font-size: 2rem;
+    font-weight: bold;
+} */
+
+.card {
+    height: 100%;
+}
+
+.text-muted {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.card-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
 }

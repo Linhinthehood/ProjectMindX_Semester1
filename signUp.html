@@ -14,6 +14,7 @@
       background: url(image/index_background.jpg);
       background-position: center;
       background-size: cover;
+      overflow-x: hidden;
     }
 
     .header {
@@ -57,6 +58,14 @@
       margin: 0;
       flex-grow: 1;
     }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0;
+    }
   </style>
 </head>
 
@@ -98,31 +107,35 @@
 
           <!-- Name input -->
           <div data-mdb-input-init class="form-outline mb-4">
-            <input type="text" id="name" class="form-control form-control-lg" placeholder="Enter your name" />
             <label class="form-label" for="name">Name</label>
+            <input type="text" id="name" class="form-control form-control-lg" placeholder="Enter your name" />
           </div>
 
           <!-- Email input -->
           <div data-mdb-input-init class="form-outline mb-4">
-            <input type="email" id="email" class="form-control form-control-lg" placeholder="Enter a valid email address" />
             <label class="form-label" for="email">Email address</label>
+            <input type="email" id="email" class="form-control form-control-lg"
+              placeholder="Enter a valid email address" />
           </div>
 
           <!-- Password input -->
           <div data-mdb-input-init class="form-outline mb-4">
-            <input type="password" id="password" class="form-control form-control-lg" placeholder="Enter password" />
             <label class="form-label" for="password">Password</label>
+            <input type="password" id="password" class="form-control form-control-lg" placeholder="Enter password" />
           </div>
 
           <!-- Confirm Password input -->
           <div data-mdb-input-init class="form-outline mb-4">
-            <input type="password" id="confirmPassword" class="form-control form-control-lg" placeholder="Confirm password" />
             <label class="form-label" for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" class="form-control form-control-lg"
+              placeholder="Confirm password" />
           </div>
 
-          <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="submit" class="btn btn-primary btn-lg" id="signUpButton" style="padding-left: 2.5rem; padding-right: 2.5rem;">Sign Up</button>
-            <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a href="signIn.html" class="link-danger">Sign In</a></p>
+          <div class="text-center text-lg-start mt-4 pt-2 d-flex">
+            <button type="submit" class="btn btn-primary btn-lg" id="signUpButton"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Sign Up</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0 mx-3">Already have an account? <a href="signIn.html"
+                class="link-danger">Sign In</a></p>
           </div>
         </form>
       </div>
@@ -164,7 +177,7 @@
     </div>
 
     <!-- footer -->
-    <div class="mt-2">
+    <div class="footer">
       <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4">
           <div class="container-fluid m-0 p-0">
@@ -183,7 +196,7 @@
     crossorigin="anonymous"></script>
 
   <script>
-    document.getElementById('signUpButton').addEventListener('click', function(event) {
+    document.getElementById('signUpButton').addEventListener('click', function (event) {
       event.preventDefault(); // Prevent default form submission
 
       const nameInput = document.getElementById('name');
